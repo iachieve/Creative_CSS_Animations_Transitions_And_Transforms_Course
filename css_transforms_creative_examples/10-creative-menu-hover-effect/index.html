@@ -6,61 +6,59 @@
     <title>Document</title>
     <style>
       body {
-        height: 100vh;
         display: flex;
-        align-items: center;
         justify-content: center;
-        margin: 0;
+        align-items: center;
         font-family: sans-serif;
+        height: 100vh;
       }
       ul {
+        list-style-type: none;
+        display: flex;
         margin: 0;
         padding: 0;
-        display: flex;
-        list-style-type: none;
       }
       ul li a {
-        display: block;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: red;
         width: 120px;
         height: 40px;
+        display: block;
+        position: relative;
         line-height: 40px;
         text-align: center;
-        color: #262626;
-        text-transform: capitalize;
-        text-decoration: none;
-        position: relative;
         transition: all 0.5s;
       }
-      a:hover{
-        color: #fff;
+      ul li a:hover {
+        color: white;
       }
-      ul li span {
-        position: absolute;
-        width: 100%;
-        height: 25%;
-        background-color: #262626;
-        z-index: -1;
-        left: 0;
-        top: 0;
-        transform: scaleX(0);
-        transition: all .5s;
-        transform-origin: left;
-      }
-      ul li a:hover span{
+      ul li a:hover span {
         transform: scaleX(1);
       }
-      span:nth-child(2){
+      ul li span {
+        background-color: #262626;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 25%;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: top;
+        transition: all 0.5s;
+      }
+      ul li span:nth-child(2) {
         top: 25%;
-        transition-delay: .15s;
+        transition-delay: 0.15s;
       }
-      span:nth-child(3){
+      ul li span:nth-child(3) {
         top: 50%;
-        transition-delay: .3s;
+        transition-delay: 0.3s;
       }
-      span:nth-child(4){
+      ul li span:nth-child(4) {
         top: 75%;
-        transition-delay: .45s;
-
+        transition-delay: 0.45s;
       }
     </style>
   </head>
@@ -71,39 +69,44 @@
           <span></span>
           <span></span>
           <span></span>
-          <span></span>home
-        </a>
-      </li>
-      <li>
-        <a href="#"
-          ><span></span>
           <span></span>
-          <span></span>
-          <span></span>about</a
+          home</a
         >
       </li>
       <li>
-        <a href="#"
-          ><span></span>
+        <a href="#">
           <span></span>
           <span></span>
-          <span></span> services</a
+          <span></span>
+          <span></span>
+          about</a
         >
       </li>
       <li>
-        <a href="#"
-          ><span></span>
+        <a href="#">
           <span></span>
           <span></span>
-          <span></span> team</a
+          <span></span>
+          <span></span>
+          service</a
         >
       </li>
       <li>
-        <a href="#"
-          ><span></span>
+        <a href="#">
           <span></span>
           <span></span>
-          <span></span> contact</a
+          <span></span>
+          <span></span>
+          team</a
+        >
+      </li>
+      <li>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          contact</a
         >
       </li>
     </ul>

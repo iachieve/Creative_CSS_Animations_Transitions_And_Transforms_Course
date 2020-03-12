@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      a {
+        width: 420px;
+        height: 80px;
+        padding: 20px 40px;
+        color: #fff;
+        font-size: 26px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 80px;
+        transition: all 0.5s;
+        position: relative;
+        letter-spacing: 2px;
+      }
+      a::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 100%;
+        height: 100%;
+        background-color: #20caff;
+        z-index: -1;
+        mix-blend-mode: multiply;
+        transition: all 0.2s;
+        transform-origin: top;
+      }
+
+      a::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 100%;
+        height: 100%;
+        background-color: tomato;
+        z-index: -1;
+        mix-blend-mode: multiply;
+        transition: all 0.2s;
+        transform-origin: bottom;
+      }
+
+      a:hover::before {
+        top: -6px;
+        left: 0;
+        transform: perspective(1000px) rotateX(75deg);
+      }
+      a:hover::after {
+        top: 6px;
+        left: 0;
+        transform: perspective(1000px) rotateX(-75deg);
+      }
+      a:hover{
+        color: #272727;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#"> button hover effect</a>
+  </body>
+</html>

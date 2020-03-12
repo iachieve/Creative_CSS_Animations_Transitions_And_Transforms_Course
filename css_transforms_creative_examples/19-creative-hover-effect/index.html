@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        transition: all .5s;
+      }
+      .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        transition: all 0.5s;
+        background-color: black;
+        transform: translateY(100%);
+      }
+      .caption h1 {
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .caption p {
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+      .container:hover .caption {
+       transform: translateY(0);
+
+      }
+      .container:hover img {
+       transform: translateY(-30%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="image hover effect with css transforms 4/image.jpg" />
+      <div class="caption">
+        <h1>amazing caption</h1>
+        <p>you can add anything here</p>
+      </div>
+    </div>
+  </body>
+</html>

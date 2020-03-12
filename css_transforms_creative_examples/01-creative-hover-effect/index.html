@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     body{
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+     a{
+       font-size: 4rem;
+       padding: 1rem;
+       color: #272727;
+        border: 5px solid #272727;
+      position: relative;
+      }
+     a:before{
+       content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgb(238, 238, 59);
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+
+      transform: rotate(-90deg);
+      transform-origin: top right;
+      transition: all 1s;
+     }
+
+     a:hover:before{
+       transform: rotate(0deg);
+     }
+    </style>
+  </head>
+  <body>
+    <a href="#">Hover Me</a>
+  </body>
+</html>
