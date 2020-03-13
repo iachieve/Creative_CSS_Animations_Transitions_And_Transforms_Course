@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .background {
+        height: 100vh;
+        background: url("./original/bg.jpg");
+        background-position: bottom left;
+        animation: driving 35s infinite linear;
+      }
+      @keyframes driving {
+        from{background-position: bottom left;}
+        to{background-position: bottom right;}
+      }
+      .car{
+        position: absolute; left:300px; bottom: -50px; width: 200px;
+      }
+      .bike{
+        position: absolute; left:700px; bottom: 55px; width: 200px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <img src="./original/car.png" class="car" alt="">
+      <img src="./original/motobike.png" class="bike" alt="">
+    </div>
+  </body>
+</html>
